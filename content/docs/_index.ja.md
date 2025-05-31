@@ -1,7 +1,6 @@
 ---
 title: Documents
 linkTitle: Documents
-identifier: Documents
 type: docs
 categories: ["docs"]
 tags: ["docs"]

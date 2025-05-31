@@ -67,14 +67,18 @@ ${project-repo}/
         ├── _index.en.md
         ├── foo/
         │   ├── _index.en.md
+        │   ├── example.go
         │   └── some-image.svg
         ├── bar/
         │   ├── index.en.md
+        │   ├── example.go
         │   └── some-image.svg
         └── baz/
             ├── alice.en.md
             └── bob.en.md
 ```
+
+Supported file extensions are `*.md`, `*.go`, `*.svg` and `*.png`.
 
 the actual website structure becomes as follows.
 

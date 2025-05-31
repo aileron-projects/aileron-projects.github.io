@@ -12,6 +12,8 @@ WD_MDs := $(shell find $(WEBSITE_DIR) -type f -name '*.md' 2>/dev/null)
 CD_MDs := $(patsubst $(WEBSITE_DIR)%,$(CONTENT_DIR)%,$(WD_MDs))
 WD_IMGs := $(shell find $(WEBSITE_DIR) -type f -name '*.svg' -or -name '*.png' 2>/dev/null)
 SD_IMGs := $(patsubst $(WEBSITE_DIR)%,$(STATIC_DIR)%,$(WD_IMGs))
+WD_GOs := $(shell find $(WEBSITE_DIR) -type f -name '*.go' 2>/dev/null)
+SD_GOs := $(patsubst $(WEBSITE_DIR)%,$(STATIC_DIR)%,$(WD_GOs))
 WD_INDEXs := $(shell find $(WEBSITE_DIR) -maxdepth 1 -type f -name '*.md' 2>/dev/null)
 CD_INDEXs := $(patsubst $(WEBSITE_DIR)%,$(CONTENT_DIR)%,$(WD_INDEXs))
 
@@ -20,14 +22,14 @@ init:
 	mkdir -p $(CONTENT_DIR)
 	mkdir -p $(STATIC_DIR)
 
-.PHONY: clear
-clear:
+.PHONY: clean
+clean:
 	rm -rf $(CONTENT_DIR)
 	rm -rf $(STATIC_DIR)
 
 .DEFAULT_GOAL:=build
 .PHONY: build
-build: init $(CD_MDs) $(SD_IMGs)
+build: init $(CD_MDs) $(SD_IMGs) $(SD_GOs)
 	# ${CD_INDEXs}
 	@for index in ${CD_INDEXs}; do \
 	echo "substitute env $$index"; \
@@ -44,5 +46,9 @@ $(STATIC_DIR)%.svg: $(WEBSITE_DIR)%.svg
 	cp $< $@
 
 $(STATIC_DIR)%.png: $(WEBSITE_DIR)%.png
+	@mkdir -p $(dir $@)
+	cp $< $@
+
+$(STATIC_DIR)%.go: $(WEBSITE_DIR)%.go
 	@mkdir -p $(dir $@)
 	cp $< $@

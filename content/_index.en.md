@@ -14,7 +14,11 @@ description: Go framework for cloud-native enterprise systems.
 <div class="mb-5"></div>
 
 <a class="btn btn-lg btn-secondary me-3" href="/docs/">
-Learn More<i class="fas fa-arrow-alt-circle-right ms-2"></i>
+Learn More<i class="fas fa-location-arrow ms-2"></i>
+</a>
+
+<a class="btn btn-lg btn-secondary me-3" href="https://github.com/aileron-projects/" target="_blank">
+GitHub<i class="fa-brands fa-github  ms-2"></i>
 </a>
 
 {{< /blocks/cover >}}

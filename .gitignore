@@ -1,6 +1,7 @@
-public/
-node_modules/
-public/
-resources/
-*.deb
+/public/
+/node_modules/
+/public/
+/resources/
+/aileron-*/
+!/aileron-example/
 !.gitkeep

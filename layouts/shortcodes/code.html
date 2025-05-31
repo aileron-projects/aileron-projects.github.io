@@ -1,0 +1,8 @@
+<!--
+Reference:
+https://marcusolsson.dev/how-to-include-code-examples-from-file-with-hugo/
+-->
+
+{{- $source := .Get "source" -}}
+{{- $filepath := print "static" .Page.RelPermalink $source -}}
+{{- readFile $filepath | safeHTML -}}

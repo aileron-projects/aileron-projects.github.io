@@ -1,0 +1,48 @@
+<!--
+Reference:
+https://marcusolsson.dev/how-to-include-code-examples-from-file-with-hugo/
+-->
+
+{{- $source := .Get "source" -}}
+{{- $filepath := print "static" .Page.RelPermalink $source -}}
+{{- $id := .Get "id" -}}
+
+{{- $content := readFile $filepath -}}
+
+{{- with $content -}}
+  {{- $snippet := . -}}
+
+  {{- if $id -}}
+    {{- $lines := split $snippet "\n" -}}
+
+    {{- $startTag := printf "START %s" $id -}}
+    {{- $endTag := printf "END %s" $id -}}
+
+    {{- $.Scratch.Set "startl" -1 -}}
+    {{- $.Scratch.Set "endl" -1 -}}
+
+    {{- range $index, $line := $lines -}}
+      {{- if hasSuffix $line $startTag -}}
+        {{- $.Scratch.Set "startl" $index -}}
+      {{- else if hasSuffix $line $endTag -}}
+        {{- $.Scratch.Set "endl" $index -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $startl := $.Scratch.Get "startl" -}}
+    {{- $endl := $.Scratch.Get "endl" -}}
+
+    {{- if lt $startl 0 -}}
+      {{- errorf "Named snippet is missing START tag: %s" $startTag -}}
+    {{- end -}}
+    {{- if lt $endl 0 -}}
+      {{- errorf "Named snippet is missing END tag: %s" $endTag -}}
+    {{- end -}}
+
+    {{- $snippetLen := sub (sub $endl $startl) 2 -}}
+    {{- $includedLines := first $snippetLen (after (add $startl 1) $lines) -}}
+    {{- $snippet = delimit $includedLines "\n" -}}
+  {{- end -}}
+
+  {{- trim $snippet "\n\r" | safeHTML -}}
+{{- end -}}

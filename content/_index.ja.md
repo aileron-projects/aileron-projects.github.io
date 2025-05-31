@@ -17,5 +17,9 @@ description: Go framework for cloud-native enterprise systems.
 Learn More<i class="fas fa-arrow-alt-circle-right ms-2"></i>
 </a>
 
+<a class="btn btn-lg btn-secondary me-3" href="/docs/">
+Learn More<i class="fas fa-arrow-alt-circle-right ms-2"></i>
+</a>
+
 {{< /blocks/cover >}}
 </div>

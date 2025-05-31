@@ -20,3 +20,7 @@ Date is `{{< date >}}`.
 Images can be embedded with relative path.
 
 ![aileron.png](aileron.png)
+
+{{< code language="go" source="aileron.go" >}}
+
+{{< snippet language="go" source="aileron.go" id="add" >}}

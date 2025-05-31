@@ -20,7 +20,7 @@ languages:
     weight: 1
   ja:
     disabled: false
-    languageName: "Japanese(日本語)"
+    languageName: "日本語"
     languageCode: "ja-JP"
     weight: 2
 
@@ -40,13 +40,6 @@ services:
   googleAnalytics:
     id: G-68J9W3Q5NX
 
-menu:
-  main:
-    - name: "GitHub"
-      weight: 90
-      url: "https://github.com/aileron-projects/"
-      pre: <i class='fa-brands fa-github'></i>
-
 params:
   github_repo: https://github.com/aileron-projects/aileron-projects.github.io
   github_project_repo: https://github.com/aileron-projects/
@@ -61,7 +54,7 @@ params:
     navbar_logo: true
     navbar_translucent_over_cover_disable: false
     sidebar_search_disable: false
-    sidebar_menu_compact: true
+    sidebar_menu_compact: false
     sidebar_menu_foldable: true
     ul_show: 5
     feedback:
@@ -83,7 +76,5 @@ params:
         desc: Practical questions and curated answers.
   version_menu: Projects
   versions:
-    # - version: aileron-foo
-    #   url: "/aileron-foo"
-    - version: aileron-example
-      url: "/aileron-example"
+    - version: go
+      url: "/go"
