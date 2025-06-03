@@ -24,6 +24,7 @@
   display: none;
 }
 
+
 [data-bs-theme="light"] p code, li code, span code  {
   padding: 0.2em 0.5em;
   border-radius: 4px;
@@ -36,4 +37,20 @@
   border-radius: 4px;
   font-weight: bold;
   background-color: var(--bs-secondary-bg);
+}
+
+.td-content {
+  [data-bs-theme="light"] p code, li code, span code  {
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: var(--bs-secondary-bg);
+  }
+
+  [data-bs-theme="dark"] p code, li code, span code  {
+    padding: 0.2em 0.5em;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: var(--bs-secondary-bg);
+  }
 }

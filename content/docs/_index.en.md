@@ -1,6 +1,6 @@
 ---
-title: Documents
-linkTitle: Documents
+title: Docs
+linkTitle: Docs
 type: docs
 categories: ["docs"]
 tags: ["docs"]
