@@ -19,7 +19,7 @@ Date is `{{< date >}}`.
 
 Images can be embedded with relative path.
 
-{{% image source="aileron.png" %}}
+![aileron.png](aileron.png)
 
 ```go:aileron.go {linenos=inline hl_lines=[3,"6-8"] style=emacs}
 package main
@@ -37,6 +37,15 @@ func main() {
 {{% code source="aileron.go" %}}
 ```
 
+Collapsible codes.
+
+<details>
+<summary>Example code</summary>
+<p>
+
 ```go {linenos=inline hl_lines=[3,"6-8"]}
 {{% snippet source="aileron.go" id="main" %}}
 ```
+
+</p>
+</details>

@@ -37,6 +37,15 @@ func main() {
 {{% code source="aileron.go" %}}
 ```
 
+Collapsible codes.
+
+<details>
+<summary>Example code</summary>
+<p>
+
 ```go {linenos=inline hl_lines=[3,"6-8"]}
 {{% snippet source="aileron.go" id="main" %}}
 ```
+
+</p>
+</details>
