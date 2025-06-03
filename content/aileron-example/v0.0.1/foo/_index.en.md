@@ -19,7 +19,7 @@ Date is `{{< date >}}`.
 
 Images can be embedded with relative path.
 
-![aileron.png](aileron.png)
+{{% image source="aileron.png" %}}
 
 ```go:aileron.go {linenos=inline hl_lines=[3,"6-8"] style=emacs}
 package main

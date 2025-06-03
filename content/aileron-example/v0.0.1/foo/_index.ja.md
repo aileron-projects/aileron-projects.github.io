@@ -19,8 +19,24 @@ Date is `{{< date >}}`.
 
 Images can be embedded with relative path.
 
-![aileron.png](aileron.png)
+{{% image source="aileron.png" %}}
 
-{{< code language="go" source="aileron.go" >}}
+```go:aileron.go {linenos=inline hl_lines=[3,"6-8"] style=emacs}
+package main
 
-{{< snippet language="go" source="aileron.go" id="add" >}}
+import "fmt"
+
+func main() {
+    for i := 0; i < 3; i++ {
+        fmt.Println("Value of i:", i)
+    }
+}
+```
+
+```go {title="aileron.go" linenos=inline hl_lines=[3,"9-11"] style=emacs}
+{{% code source="aileron.go" %}}
+```
+
+```go {linenos=inline hl_lines=[3,"6-8"]}
+{{% snippet source="aileron.go" id="main" %}}
+```

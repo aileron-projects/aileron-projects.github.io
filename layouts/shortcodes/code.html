@@ -4,5 +4,7 @@ https://marcusolsson.dev/how-to-include-code-examples-from-file-with-hugo/
 -->
 
 {{- $source := .Get "source" -}}
-{{- $filepath := print "static" .Page.RelPermalink $source -}}
+{{- $path := .Page.RelPermalink -}}
+{{- $cleanPath := replace $path (printf "/%s/" .Site.Language.Lang) "/" -}}
+{{- $filepath := print "/static" $cleanPath $source -}}
 {{- readFile $filepath | safeHTML -}}
