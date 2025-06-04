@@ -4,8 +4,8 @@ linkTitle: "Bar Link Title"
 identifier: "Bar Identifier"
 type: docs
 weight: 2
-categories: ["bar"]
-tags: ["bar"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 

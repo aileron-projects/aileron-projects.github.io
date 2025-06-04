@@ -4,8 +4,8 @@ linkTitle: "Alice Link Title"
 identifier: "Alice Identifier"
 type: docs
 weight: 3
-categories: ["alice"]
-tags: ["alice"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 

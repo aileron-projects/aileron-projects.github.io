@@ -4,8 +4,8 @@ linkTitle: "Bar Link Title"
 identifier: "Bar Identifier"
 type: docs
 weight: 2
-categories: ["bar"]
-tags: ["bar"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 
@@ -19,4 +19,4 @@ Date is `{{< date >}}`.
 
 Images can be embedded with relative path.
 
-{{% image source="aileron.png" %}}
+![aileron.png](aileron.png)

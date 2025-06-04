@@ -4,8 +4,8 @@ linkTitle: "Alice Link Title"
 identifier: "Alice Identifier"
 type: docs
 weight: 3
-categories: ["alice"]
-tags: ["alice"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 
@@ -21,7 +21,7 @@ Images should go in the `alice/` folder.
 
 It can be embedded with file name without folder name `alice/`.
 
-{{% image source="aileron.png" %}}
+![aileron.png](aileron.png)
 
 ```go {title="aileron.go" linenos=inline hl_lines=[3,"9-11"] style=emacs}
 {{% code source="aileron.go" %}}

@@ -1,6 +1,6 @@
 ---
-title: Documents
-linkTitle: Documents
+title: ドキュメント
+linkTitle: ドキュメント
 type: docs
 categories: ["docs"]
 tags: ["docs"]

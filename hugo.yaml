@@ -9,7 +9,7 @@ theme: "docsy"
 # https://gohugo.io/content-management/
 # https://gohugo.io/content-management/multilingual/
 contentDir: "content/"
-defaultContentLanguage: "en"
+defaultContentLanguage: "ja"
 enableMissingTranslationPlaceholders: true
 enableGitInfo: true
 languages:

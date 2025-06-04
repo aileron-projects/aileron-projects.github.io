@@ -1,6 +1,6 @@
 ---
-title: Community
-linkTitle: Community
+title: コミュニティ
+linkTitle: コミュニティ
 type: docs
 categories: ["community"]
 tags: ["community"]

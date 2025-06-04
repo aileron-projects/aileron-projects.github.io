@@ -4,8 +4,8 @@ linkTitle: "Foo Link Title"
 identifier: "Foo Identifier"
 type: docs
 weight: 1
-categories: ["foo"]
-tags: ["foo"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 

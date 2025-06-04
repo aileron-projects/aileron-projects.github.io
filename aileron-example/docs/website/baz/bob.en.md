@@ -4,8 +4,8 @@ linkTitle: "Bob Link Title"
 identifier: "Bob Identifier"
 type: docs
 weight: 3
-categories: ["bob"]
-tags: ["bob"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 

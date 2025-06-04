@@ -1,6 +1,6 @@
 ---
-title: Blog
-linkTitle: Blog
+title: ブログ
+linkTitle: ブログ
 type: blog
 categories: ["blog"]
 tags: ["blog"]

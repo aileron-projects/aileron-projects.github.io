@@ -4,8 +4,8 @@ linkTitle: "Bob Link Title"
 identifier: "Bob Identifier"
 type: docs
 weight: 3
-categories: ["bob"]
-tags: ["bob"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 
@@ -21,7 +21,7 @@ Images should go in the `bob/` folder.
 
 It can be embedded with file name without folder name `bob/`.
 
-{{% image source="aileron.png" %}}
+![aileron.png](aileron.png)
 
 ```go {title="aileron.go" linenos=inline hl_lines=[3,"9-11"] style=emacs}
 {{% code source="aileron.go" %}}

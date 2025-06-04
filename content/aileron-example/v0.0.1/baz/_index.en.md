@@ -3,8 +3,8 @@ title: "Baz Title"
 linkTitle: "Baz Link Title"
 identifier: "Baz Identifier"
 type: docs
-categories: ["baz"]
-tags: ["baz"]
+categories: []
+tags: []
 description: "aileron documentation example"
 ---
 
