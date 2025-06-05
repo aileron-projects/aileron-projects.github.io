@@ -23,45 +23,15 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        project: ["go"]
-    steps:
-      - uses: actions/checkout@v4
-      - run: |
-          sudo chmod +x ./make.sh
-          PROJECT="${{ matrix.project }}" ./make.sh
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.project }}
-          path: |
-            ./content/${{ matrix.project }}/
-            ./static/${{ matrix.project }}/
-
-  merge:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - uses: actions/upload-artifact/merge@v4
-        with:
-          delete-merged: true
-
-  hugo:
-    runs-on: ubuntu-latest
-    needs: merge
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
+      - run: make build
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - uses: actions/download-artifact@v4
-      - run: |
-          ls -la
-          ls -la merged-artifacts
-          cp -r merged-artifacts/* ./
       - name: install hugo
         run: |
           wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
@@ -79,9 +49,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
-
   deploy:
-    needs: hugo
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
