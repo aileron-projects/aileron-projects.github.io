@@ -1,9 +1,8 @@
 ---
 title: "v0.0.1"
 type: docs
-date: "2025-05-13"
 categories: ["aileron-example"]
-tags: ["v0.0.1"]
+tags: []
 description: "aileron documentation example"
 params:
   prj: "aileron-example"

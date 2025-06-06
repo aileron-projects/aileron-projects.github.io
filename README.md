@@ -42,14 +42,13 @@ block-beta
 
 ## Add new project
 
-1. Add project name in [.github/workflows/gh-pages.yaml](.github/workflows/gh-pages.yaml).
-   1. Project name should go in the `jobs.build.strategy.matrix`.
 1. Create project folder in [content/](content/).
-   1. Copy example folder [content/aileron-example/](content/aileron-example/) and rename it.
-   1. Modify the contents of copied markdowns.
-1. Add link in [hugo.yaml](hugo.yaml).
+   1. See the [content/go/](content/go/) for example.
+   2. Prepare `build.sh` in the directory.
+2. Add `build.sh` path in the [Makfile](Makfile).
+3. Add project link in [hugo.yaml](hugo.yaml).
    1. Project link should go in the `params.versions`.
-1. Commit changes.
+4. Commit changes.
 
 ## Document structure
 
@@ -64,7 +63,6 @@ If documents follow this structure,
 ${project-repo}/
 └── docs/
     └── website/
-        ├── _index.en.md
         ├── foo/
         │   ├── _index.en.md
         │   ├── example.go
