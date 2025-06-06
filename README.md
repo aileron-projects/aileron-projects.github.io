@@ -17,27 +17,20 @@ Document aggregation is scripted in
 - Shell Script ([make.sh](make.sh) called from the workflow).
 - Make ([Makefile](Makefile) called from the shell).
 
-Scripts fetch documents from tag with semantic version `^v[0-9]+.[0-9]+.[0-9]+$`.
-
 ```mermaid
 block-beta
-  columns 4
-
+  columns 3
   space:1
-  website["🟪 <b>aileron-projects.github.io</b></br>(This repository)"]:2
+  website["🟪 <b>aileron-projects.github.io</b></br>(This repository)"]
   space:1
-
-  space:4
-
+  space:3
   project1["🟩 <b>Sub Project Foo</b></br>TAG: v1.0.0</br>TAG: v1.0.1</br>TAG: v1.0.3</br>..."]
-  project2["🟩 <b>Sub Project Bar</b></br>TAG: v2.1.0</br>TAG: v2.2.0</br>TAG: v2.3.0</br>..."]
-  project3["......"]
-  project4["🟩 <b>Sub Project Baz</b></br>TAG: v1.5.0</br>TAG: v1.5.1</br>TAG: v1.6.0</br>..."]
+  project2["......"]
+  project3["🟩 <b>Sub Project Bar</b></br>TAG: v2.1.0</br>TAG: v2.2.0</br>TAG: v2.3.0</br>..."]
 
   website --"fetch"--> project1
   website --"fetch"--> project2
   website --"fetch"--> project3
-  website --"fetch"--> project4
 ```
 
 ## Add new project
@@ -76,7 +69,7 @@ ${project-repo}/
             └── bob.en.md
 ```
 
-Supported file extensions are `*.md`, `*.go`, `*.svg` and `*.png`.
+Non markdown (`*.md`) files are moved into the [static/](static/) directory.
 
 the actual website structure becomes as follows.
 
@@ -89,13 +82,10 @@ ${tag}/
     └── bob      --- /${tag}/baz/bob
 ```
 
-Basically, using `_index.md` or `index.md` is strongly recommended.
+Basically, using `_index.md` is strongly recommended.
 And keep a single markdown file and embedded images in a single folder.
-It makes it easy to embed images into markdowns because images can be referenced by relative path from the markdown. It also makes local preview available.
 
 ## Run website on local
-
-NOTE: This step does not fetch documents from sub-projects.
 
 Environment setup
 
