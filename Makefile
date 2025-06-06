@@ -4,6 +4,6 @@ TARGETS += content/go/build.sh
 .PHONY: build
 build: $(TARGETS)
 
-.PHONY: %.sh
-%.sh:
+.PHONY: $(TARGETS)
+$(TARGETS):
 	chmod +x $@ && bash -c $@
