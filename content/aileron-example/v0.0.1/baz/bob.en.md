@@ -21,7 +21,7 @@ Images should go in the `bob/` folder.
 
 It can be embedded with file name without folder name `bob/`.
 
-![aileron.png](aileron.png)
+{{% image source="aileron.png" %}}
 
 ```go {title="aileron.go" linenos=inline hl_lines=[3,"9-11"] style=emacs}
 {{% code source="aileron.go" %}}
