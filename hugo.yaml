@@ -11,12 +11,12 @@ enableGitInfo: true
 languages:
   en:
     disabled: false
-    languageName: English
+    languageName: "🌐English"
     languageCode: "en-US"
     weight: 1
   ja:
     disabled: false
-    languageName: "日本語"
+    languageName: "🌐日本語"
     languageCode: "ja-JP"
     weight: 2
 
