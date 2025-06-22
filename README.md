@@ -82,8 +82,7 @@ ${tag}/
     └── bob      --- /${tag}/baz/bob
 ```
 
-Basically, using `_index.md` is strongly recommended.
-And keep a single markdown file and embedded images in a single folder.
+Basically, use `_index.md` to keep directory structure simple.
 
 ## Run website on local
 
