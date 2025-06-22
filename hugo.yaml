@@ -72,5 +72,7 @@ params:
         desc: Practical questions and curated answers.
   version_menu: Projects
   versions:
+    - version: aileron-observability
+      url: "/aileron-observability"
     - version: go
       url: "/go"
